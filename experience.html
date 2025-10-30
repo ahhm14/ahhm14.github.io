@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Hernandez - Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #012030;
+            background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%);
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #012030;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand {
+            color: #9AEBA3;
+            font-size: 1.5em;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 20px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .nav-links a {
+            color: #DAFDBA;
+            text-decoration: none;
+            padding: 20px 25px;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: rgba(69, 196, 176, 0.2);
+            border-bottom-color: #45C4B0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(1, 32, 48, 0.3);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%);
+            color: white;
+            padding: 40px 40px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #13678A;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #45C4B0;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 3px solid #45C4B0;
+        }
+
+        h3 {
+            color: #012030;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .meta {
+            color: #13678A;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #012030;
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style-position: inside;
+            color: #012030;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #DAFDBA;
+            color: #012030;
+            font-size: 0.9em;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #DAFDBA;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #012030;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(69, 196, 176, 0.2);
+            }
+
+            .page-header {
+                padding: 30px 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Alejandro Hernandez</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content-box">
+            <div class="page-header">
+                <h1>Experience</h1>
+            </div>
+
+            <div class="content">
+                <section class="experience-section">
+                    <h2>Work Experience</h2>
+
+                    <div class="experience-item">
+                        <h3>Power System Specialist</h3>
+                        <p class="meta">Ramboll, Barcelona | Oct 2023 - Present</p>
+                        <p class="description">
+                            Worked and lead grid connection projects with a focus on offshore wind farms and power
+                            studies
+                        </p>
+                        <ul>
+                            <li>Analysis and power system studies for offshore wind farm projects</li>
+                            <li>Power system modelling and analysis for industrial plants</li>
+                            <li>HVDC Interconnection project conceptual design</li>
+                            <li>Sizing and rating of High Voltage equipment of electrical transmission equipment, including
+                            export cables, switchgears, busbars and reactive power compensation such as STATCOMs and
+                            harmonic filters</li>
+                            <li>Development of internal tools for automatization and work optimization</li>
+                            <li>Project management of deliverables in large-scale projects</li>
+                            <li>Support on bidding team in proposals and tenders</li>
+                            <li>Mentor young engineers</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Research Engineer/ PhD Candidate</h3>
+                        <p class="meta">CITCEA | Mar 2020 - Sept 2023</p>
+                        <p class="description">
+                            Project Engineer for European projects and PhD Candidate
+                        </p>
+                        <ul>
+                            <li>Analysis and collaboration in the development of European research projects,
+                            with a focus in the application of machine learning in power systems</li>
+                            <li>Research of methods for congestion forecast and energy flexibility optimization to manage
+                            integration of renewables in distribution grids</li>
+                            <li>Research on integration of local energy communities from a technical perspective and
+                            analysis of their impact in smart distribution grids</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Project Engineer</h3>
+                        <p class="meta">DIRAM, Mexico | May 2017 - July 2019</p>
+                        <p class="description">
+                            Early carrer as electrical project engineer for a company dedicated to power quality
+                        </p>
+                        <ul>
+                            <li>Development of electrical studies such as power flow, short-circuit and harmonics for
+                            industrial plants in Mexico</li>
+                            <li>Data analysis, simulation and grid compliance studies for solar and wind utility-scale
+                            power plants (up to 400 MW)</li>
+                            <li>Automatized grid simulations for the assessment of interconnection requirements</li>
+                            <li>Design and on-site installation of reactive power compensation equipment such as harmonic
+                            filters and capacitor banks</li>
+                            <li>Management and support of EPC client during interconnection projects to transmission
+                            grid for large-scale industrial and generation plants</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="education-section" style="margin-top: 50px;">
+                    <h2>Education</h2>
+
+                    <div class="education-item">
+                        <h3>PhD Electrical Engineering</h3>
+                        <p class="meta">Universidad Politecnica de Cataluña | 2020 - 2025</p>
+                        <p class="description">
+                            Thesis title: Machine Learning for Smart Grid Operation with Local Energy Communities"
+                        </p>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>Master in Fundamentals of Data Science</h3>
+                        <p class="meta">Universidad de Barcelona | 2019 - 2020</p>
+                        <ul>
+                            Thesis title: Hand-crafted and Deep Learning-based CMR Radiomics for Diagnosis of Cardiovascular Diseases
+                        </ul>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>Bachelors in Mechanical Electrical Engineering</h3>
+                        <p class="meta">Tecnologico de Monterrey | 2013 - 2018</p>
+                        <ul>
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Alejandro Hernandez. Built with HTML & CSS | Hosted on GitHub Pages</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

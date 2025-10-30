@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #012030;
+            background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%);
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #012030;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand {
+            color: #9AEBA3;
+            font-size: 1.5em;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 20px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .nav-links a {
+            color: #DAFDBA;
+            text-decoration: none;
+            padding: 20px 25px;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: rgba(69, 196, 176, 0.2);
+            border-bottom-color: #45C4B0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(1, 32, 48, 0.3);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%);
+            color: white;
+            padding: 40px 40px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #13678A;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #45C4B0;
+        }
+
+        .project-item {
+            margin-bottom: 40px;
+            padding-left: 20px;
+            border-left: 3px solid #45C4B0;
+        }
+
+        h3 {
+            color: #012030;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .meta {
+            color: #13678A;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #012030;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .tech-tag {
+            background: #DAFDBA;
+            color: #012030;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .project-links {
+            margin-top: 15px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            color: #13678A;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .project-links a:hover {
+            color: #45C4B0;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #DAFDBA;
+            color: #012030;
+            font-size: 0.9em;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #DAFDBA;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #012030;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(69, 196, 176, 0.2);
+            }
+
+            .page-header {
+                padding: 30px 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Your Name</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content-box">
+            <div class="page-header">
+                <h1>Projects</h1>
+            </div>
+
+        <div style="text-align: center; padding: 50px 20px; background: #f8f9fa; border-radius: 12px; margin: 40px 0;">
+            <div style="font-size: 4em; margin-bottom: 20px;">⚙️</div>
+            <h3 style="color: #13678A; font-size: 1.8em; margin-bottom: 15px;">In the Making</h3>
+            <p style="color: #012030; font-size: 1.1em; line-height: 1.8; max-width: 600px; margin: 0 auto;">
+                I'm currently working on adding more content to this section.
+                <br>Stay tuned for updates!
+            </p>
+            </div>
+<!--            <div class="content">-->
+<!--                <section>-->
+<!--                    <h2>Featured Projects</h2>-->
+
+<!--                    <div class="project-item">-->
+<!--                        <h3>E-Commerce Platform</h3>-->
+<!--                        <p class="meta">Personal Project | 2023</p>-->
+<!--                        <p class="description">-->
+<!--                            Built a full-featured online shopping platform with payment integration, inventory management,-->
+<!--                            and admin dashboard. The platform handles thousands of transactions daily with 99.9% uptime-->
+<!--                            and includes features like real-time inventory updates, order tracking, and automated email notifications.-->
+<!--                        </p>-->
+<!--                        <div class="tech-tags">-->
+<!--                            <span class="tech-tag">React</span>-->
+<!--                            <span class="tech-tag">Node.js</span>-->
+<!--                            <span class="tech-tag">MongoDB</span>-->
+<!--                            <span class="tech-tag">Stripe API</span>-->
+<!--                            <span class="tech-tag">AWS</span>-->
+<!--                            <span class="tech-tag">Docker</span>-->
+<!--                        </div>-->
+<!--                        <div class="project-links">-->
+<!--                            <a href="https://github.com/yourusername/ecommerce" target="_blank">🐙 View on GitHub</a>-->
+<!--                            <a href="https://demo.yoursite.com" target="_blank">🌐 Live Demo</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="project-item">-->
+<!--                        <h3>Task Management Application</h3>-->
+<!--                        <p class="meta">Open Source | 2022</p>-->
+<!--                        <p class="description">-->
+<!--                            Collaborative task management tool with real-time updates using WebSockets. Features include-->
+<!--                            task assignment, priority levels, deadlines, file attachments, and team collaboration.-->
+<!--                            Over 500 stars on GitHub and actively maintained with a growing community of contributors.-->
+<!--                        </p>-->
+<!--                        <div class="tech-tags">-->
+<!--                            <span class="tech-tag">React</span>-->
+<!--                            <span class="tech-tag">TypeScript</span>-->
+<!--                            <span class="tech-tag">Socket.io</span>-->
+<!--                            <span class="tech-tag">Express</span>-->
+<!--                            <span class="tech-tag">PostgreSQL</span>-->
+<!--                            <span class="tech-tag">Redis</span>-->
+<!--                        </div>-->
+<!--                        <div class="project-links">-->
+<!--                            <a href="https://github.com/yourusername/taskmanager" target="_blank">🐙 View on GitHub</a>-->
+<!--                            <a href="https://taskapp.yoursite.com" target="_blank">🌐 Live Demo</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="project-item">-->
+<!--                        <h3>Weather Dashboard</h3>-->
+<!--                        <p class="meta">Personal Project | 2023</p>-->
+<!--                        <p class="description">-->
+<!--                            Interactive weather dashboard that displays current conditions, 7-day forecasts, and historical-->
+<!--                            weather data. Includes beautiful visualizations using charts and maps, with support for multiple-->
+<!--                            locations and weather alerts.-->
+<!--                        </p>-->
+<!--                        <div class="tech-tags">-->
+<!--                            <span class="tech-tag">Vue.js</span>-->
+<!--                            <span class="tech-tag">Chart.js</span>-->
+<!--                            <span class="tech-tag">OpenWeather API</span>-->
+<!--                            <span class="tech-tag">Tailwind CSS</span>-->
+<!--                            <span class="tech-tag">Vercel</span>-->
+<!--                        </div>-->
+<!--                        <div class="project-links">-->
+<!--                            <a href="https://github.com/yourusername/weather-dashboard" target="_blank">🐙 View on GitHub</a>-->
+<!--                            <a href="https://weather.yoursite.com" target="_blank">🌐 Live Demo</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="project-item">-->
+<!--                        <h3>Developer Portfolio Generator</h3>-->
+<!--                        <p class="meta">Open Source | 2021</p>-->
+<!--                        <p class="description">-->
+<!--                            CLI tool that helps developers create beautiful portfolio websites from a JSON configuration file.-->
+<!--                            Supports multiple themes, automatic deployment to GitHub Pages, and includes SEO optimization.-->
+<!--                            Downloaded over 10,000 times on npm.-->
+<!--                        </p>-->
+<!--                        <div class="tech-tags">-->
+<!--                            <span class="tech-tag">Node.js</span>-->
+<!--                            <span class="tech-tag">Commander.js</span>-->
+<!--                            <span class="tech-tag">EJS</span>-->
+<!--                            <span class="tech-tag">GitHub Actions</span>-->
+<!--                        </div>-->
+<!--                        <div class="project-links">-->
+<!--                            <a href="https://github.com/yourusername/portfolio-gen" target="_blank">🐙 View on GitHub</a>-->
+<!--                            <a href="https://www.npmjs.com/package/portfolio-gen" target="_blank">📦 npm Package</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="project-item">-->
+<!--                        <h3>AI Chat Assistant</h3>-->
+<!--                        <p class="meta">Personal Project | 2024</p>-->
+<!--                        <p class="description">-->
+<!--                            Intelligent chatbot built with natural language processing capabilities. Integrates with multiple-->
+<!--                            AI APIs to provide helpful responses, supports conversation history, and includes a clean-->
+<!--                            user interface with markdown support and code syntax highlighting.-->
+<!--                        </p>-->
+<!--                        <div class="tech-tags">-->
+<!--                            <span class="tech-tag">Python</span>-->
+<!--                            <span class="tech-tag">FastAPI</span>-->
+<!--                            <span class="tech-tag">OpenAI API</span>-->
+<!--                            <span class="tech-tag">React</span>-->
+<!--                            <span class="tech-tag">WebSockets</span>-->
+<!--                        </div>-->
+<!--                        <div class="project-links">-->
+<!--                            <a href="https://github.com/yourusername/ai-chat" target="_blank">🐙 View on GitHub</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </section>-->
+<!--            </div>-->
+
+<!--            <footer>-->
+<!--                <p>&copy; 2025 Your Name. Built with HTML & CSS | Hosted on GitHub Pages</p>-->
+<!--            </footer>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <script>-->
+<!--        function toggleMenu() {-->
+<!--            const navLinks = document.getElementById('navLinks');-->
+<!--            navLinks.classList.toggle('active');-->
+<!--        }-->
+<!--    </script>-->
+<!--</body>-->
+</html>

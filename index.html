@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Hernandez CV - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #012030;
+            background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%);
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #012030;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand {
+            color: #9AEBA3;
+            font-size: 1.5em;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 20px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .nav-links a {
+            color: #DAFDBA;
+            text-decoration: none;
+            padding: 20px 25px;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: rgba(69, 196, 176, 0.2);
+            border-bottom-color: #45C4B0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(1, 32, 48, 0.3);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            border: 5px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.7);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .contact-info a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #13678A;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #45C4B0;
+        }
+
+        .about {
+            font-size: 1.1em;
+            color: #012030;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #DAFDBA;
+            color: #012030;
+            font-size: 0.9em;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #DAFDBA;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #012030;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(69, 196, 176, 0.2);
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Alejandro Hernandez</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content-box">
+            <header>
+                <div class="profile-image">
+                    <img src="images/pic.jpg" alt="Alejandro Hernandez" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                </div>
+                <h1>Alejandro Hernandez</h1>
+                <p class="tagline">Power Systems Engineer | Data Scientist </p>
+                <div class="contact-info">
+                    <a href="mailto:your.email@example.com">📧 Email</a>
+                    <a href="https://linkedin.com/in/alejandro-hernandez-matheus" target="_blank">💼 LinkedIn</a>
+                    <a href="https://github.com/ahhm14" target="_blank">🐙 GitHub</a>
+                    <a href="https://scholar.google.com/citations?user=p8iC7gMAAAAJ&hl=en&oi=ao" target="_blank"> 📄Publications</a>
+                </div>
+            </header>
+
+            <div class="content">
+                <section>
+                    <h2>About Me</h2>
+                    <p class="about">
+                        I am a Power Systems Engineer with knowledge and experience in power systems and large scale
+                        renewable energy grid integration projects, with a main focus on offshore wind farms transmission
+                        systems. My work experience in power systems is combined with studies on machine learning in the
+                        energy field, allowing me to have new perspectives and develop tools for a better approach to
+                        problem-solving. I have a strong drive to tackle complex problems that motivates me to learn and
+                        improve in a daily basis. I also enjoy to collaborate with teammates.
+                    </p>
+                </section>
+
+                <section style="margin-top: 40px;">
+                    <h2>Skills</h2>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <span style="background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">Power Systems</span>
+                        <span style="background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">Python</span>
+                        <span style="background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">PowerFactory</span>
+                        <span style="background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">AutoCAD</span>
+                        <span style="background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">Project Management</span>
+                        <span style="background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">Communication</span>
+                        <span style="background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">Leadership</span>
+                        <span style="background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em;">Git</span>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Alejandro Hernandez. Built with HTML & CSS | Hosted on GitHub Pages</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
