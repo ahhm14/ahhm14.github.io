@@ -1,349 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Hernandez CV - Projects</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #012030;
-            background:
-                linear-gradient(135deg, rgba(19, 103, 138, 0.35) 0%, rgba(69, 196, 176, 0.35) 100%),
-                url('images/Portada%20y%20cover.jpeg') center / cover no-repeat fixed;
-            min-height: 100vh;
-        }
-
-        nav {
-            background: #012030;
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .nav-brand {
-            color: #9AEBA3;
-            font-size: 1.5em;
-            font-weight: 700;
-            text-decoration: none;
-            padding: 20px 0;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 0;
-        }
-
-        .nav-links a {
-            color: #DAFDBA;
-            text-decoration: none;
-            padding: 20px 25px;
-            display: block;
-            transition: all 0.3s;
-            border-bottom: 3px solid transparent;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            background: rgba(69, 196, 176, 0.2);
-            border-bottom-color: #45C4B0;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .content-box {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(4px);
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(1, 32, 48, 0.3);
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, #13678A 0%, #45C4B0 100%);
-            color: white;
-            padding: 40px 40px;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 2.5em;
-            font-weight: 700;
-        }
-
-        .content {
-            padding: 40px;
-        }
-
-        h2 {
-            color: #13678A;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #45C4B0;
-        }
-
-        .project-item {
-            margin-bottom: 40px;
-            padding-left: 20px;
-            border-left: 3px solid #45C4B0;
-        }
-
-        h3 {
-            color: #012030;
-            font-size: 1.3em;
-            margin-bottom: 5px;
-        }
-
-        .meta {
-            color: #13678A;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            color: #012030;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 15px 0;
-        }
-
-        .tech-tag {
-            background: #DAFDBA;
-            color: #012030;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-
-        .project-links {
-            margin-top: 15px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            color: #13678A;
-            text-decoration: none;
-            margin-right: 20px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .project-links a:hover {
-            color: #45C4B0;
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #DAFDBA;
-            color: #012030;
-            font-size: 0.9em;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #DAFDBA;
-            font-size: 1.5em;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #012030;
-                flex-direction: column;
-                gap: 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                padding: 15px 20px;
-                border-bottom: 1px solid rgba(69, 196, 176, 0.2);
-            }
-
-            .page-header {
-                padding: 30px 20px;
-            }
-
-            .page-header h1 {
-                font-size: 2em;
-            }
-
-            .content {
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Alejandro Hernandez</title>
+  <meta name="description" content="Selected projects by Alejandro Hernandez Matheus — probabilistic power flow, hosting capacity, PhD thesis, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects — Alejandro Hernandez">
+  <meta property="og:description" content="Selected projects by Alejandro Hernandez Matheus — probabilistic power flow, hosting capacity, PhD thesis, and more.">
+  <meta property="og:image" content="https://ahhm14.github.io/images/pic.jpg">
+  <meta property="og:url" content="https://ahhm14.github.io/projects.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://ahhm14.github.io/projects.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">Alejandro Hernandez</a>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <div class="container">
-        <div class="content-box">
-            <div class="page-header">
-                <h1>Projects</h1>
-            </div>
-
-            <div class="content">
-                <section>
-                    <h2>Featured Projects</h2>
-
-                    <div class="project-item">
-                        <h3>Probabilistic Power Flow with PandaPower</h3>
-                        <p class="meta">Research & Engineering | Power Systems</p>
-                        <p class="description">
-                            Educational and research tool for conducting Monte Carlo simulations on electrical power systems
-                            using PandaPower. Enables generation of data samples following selected probability distributions
-                            to examine how input uncertainties affect power system behaviour during operational and planning phases.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PandaPower</span>
-                            <span class="tech-tag">Monte Carlo</span>
-                            <span class="tech-tag">Power Systems</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ahhm14/PPF-Pandapower" target="_blank">&#128025; View on GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3>PowerHosting</h3>
-                        <p class="meta">Research | Power Systems & Machine Learning</p>
-                        <p class="description">
-                            A collection of notebooks and code exploring the concept of power hosting capacity in electrical
-                            networks, combining power systems analysis with machine learning techniques to assess grid
-                            integration limits for distributed energy resources.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Jupyter Notebook</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Power Systems</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ahhm14/PowerHosting" target="_blank">&#128025; View on GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3>Machine Learning Methods for Smart Grid Operation with LECs</h3>
-                        <p class="meta">PhD Thesis | Universitat Politècnica de Catalunya | 2025</p>
-                        <p class="description">
-                            Doctoral thesis examining how machine learning can improve operations in decentralised electricity
-                            systems incorporating Local Energy Communities (LECs). Analyses the integration of LECs with smart
-                            distribution grids and develops predictive frameworks for managing line congestion in complex power
-                            systems with renewable energy sources and prosumers. Awarded an International Doctorate mention.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Smart Grids</span>
-                            <span class="tech-tag">Local Energy Communities</span>
-                            <span class="tech-tag">Congestion Management</span>
-                            <span class="tech-tag">Probabilistic Power Flow</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://www.tdx.cat/handle/10803/695099#page=1" target="_blank">&#128196; Read Thesis</a>
-                        </div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3>Radiomics for Cardiovascular Disease Diagnosis</h3>
-                        <p class="meta">Master's Thesis | University of Barcelona (UB)</p>
-                        <p class="description">
-                            Final Master's Project for the MSc in Fundamentals of Data Science at UB. Applies radiomics
-                            techniques to cardiac magnetic resonance (CMR) imaging for cardiovascular disease diagnosis,
-                            combining hand-crafted radiomics features with deep learning-based feature extraction from
-                            convolutional neural networks. Includes a feature fusion pipeline evaluated on the ACDC
-                            Challenge and UK BioBank benchmark datasets.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Jupyter Notebook</span>
-                            <span class="tech-tag">Deep Learning</span>
-                            <span class="tech-tag">Radiomics</span>
-                            <span class="tech-tag">CNN</span>
-                            <span class="tech-tag">Medical Imaging</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/ahhm14/FinalMasterProject-AHHM" target="_blank">&#128025; View on GitHub</a>
-                        </div>
-                    </div>
-
-                </section>
-            </div>
-        </div>
+  <!-- NAV -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Alejandro Hernandez</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <ul class="nav-list" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <footer>
-        <p>&copy; 2025 Alejandro Hernandez. Built with HTML & CSS</p>
-    </footer>
+  <main>
+    <div class="page-wrap">
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+      <header class="page-header">
+        <h1>Projects</h1>
+      </header>
+
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="section-heading">Featured Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-thumb" aria-label="Thumbnail placeholder">
+              <!-- TODO: add thumbnail image — recommended 16:9, ~800×450px -->
+              Thumbnail coming soon
+            </div>
+            <div class="project-inner">
+              <h2>Probabilistic Power Flow with PandaPower</h2>
+              <p class="project-meta">Research &amp; Engineering · Power Systems</p>
+              <p class="project-desc">
+                Educational and research tool for conducting Monte Carlo simulations on electrical power systems
+                using PandaPower. Enables generation of data samples following selected probability distributions
+                to examine how input uncertainties affect power system behaviour during operational and planning phases.
+              </p>
+              <div class="tags-row">
+                <span class="tag">Python</span>
+                <span class="tag">PandaPower</span>
+                <span class="tag">Monte Carlo</span>
+                <span class="tag">Power Systems</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ahhm14/PPF-Pandapower" target="_blank"
+                   rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb" aria-label="Thumbnail placeholder">
+              <!-- TODO: add thumbnail image -->
+              Thumbnail coming soon
+            </div>
+            <div class="project-inner">
+              <h2>PowerHosting</h2>
+              <p class="project-meta">Research · Power Systems &amp; Machine Learning</p>
+              <p class="project-desc">
+                A collection of notebooks and code exploring the concept of power hosting capacity in electrical
+                networks, combining power systems analysis with machine learning techniques to assess grid
+                integration limits for distributed energy resources.
+              </p>
+              <div class="tags-row">
+                <span class="tag">Python</span>
+                <span class="tag">Jupyter Notebook</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Power Systems</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ahhm14/PowerHosting" target="_blank"
+                   rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb" aria-label="Thumbnail placeholder">
+              <!-- TODO: add thumbnail image -->
+              Thumbnail coming soon
+            </div>
+            <div class="project-inner">
+              <h2>Machine Learning Methods for Smart Grid Operation with LECs</h2>
+              <p class="project-meta">PhD Thesis · Universitat Politècnica de Catalunya · 2025</p>
+              <p class="project-desc">
+                Doctoral thesis examining how machine learning can improve operations in decentralised electricity
+                systems incorporating Local Energy Communities (LECs). Analyses the integration of LECs with smart
+                distribution grids and develops predictive frameworks for managing line congestion in complex power
+                systems with renewable energy sources and prosumers. Awarded an International Doctorate mention.
+              </p>
+              <div class="tags-row">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Smart Grids</span>
+                <span class="tag">Local Energy Communities</span>
+                <span class="tag">Congestion Management</span>
+                <span class="tag">Probabilistic Power Flow</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.tdx.cat/handle/10803/695099#page=1" target="_blank"
+                   rel="noopener noreferrer" class="btn btn-outline btn-sm">Read Thesis</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb" aria-label="Thumbnail placeholder">
+              <!-- TODO: add thumbnail image -->
+              Thumbnail coming soon
+            </div>
+            <div class="project-inner">
+              <h2>Radiomics for Cardiovascular Disease Diagnosis</h2>
+              <p class="project-meta">Master's Thesis · Universitat de Barcelona (UB)</p>
+              <p class="project-desc">
+                Final Master's Project for the MSc in Fundamentals of Data Science at UB. Applies radiomics
+                techniques to cardiac magnetic resonance (CMR) imaging for cardiovascular disease diagnosis,
+                combining hand-crafted radiomics features with deep learning-based feature extraction from
+                convolutional neural networks. Includes a feature fusion pipeline evaluated on the ACDC
+                Challenge and UK BioBank benchmark datasets.
+              </p>
+              <div class="tags-row">
+                <span class="tag">Python</span>
+                <span class="tag">Jupyter Notebook</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Radiomics</span>
+                <span class="tag">CNN</span>
+                <span class="tag">Medical Imaging</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ahhm14/FinalMasterProject-AHHM" target="_blank"
+                   rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div><!-- /.page-wrap -->
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Alejandro Hernandez. Built with HTML &amp; CSS · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
