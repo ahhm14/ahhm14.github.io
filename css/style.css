@@ -348,6 +348,8 @@ section + section { margin-top: var(--sp-12); }
   font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: var(--sp-2);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .hero-tagline {
@@ -883,12 +885,15 @@ section + section { margin-top: var(--sp-12); }
 .contact-card a {
   font-size: var(--fs-sm);
   font-weight: 600;
-  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 /* =============================================================
    RESPONSIVE
    ============================================================= */
+
+/* No horizontal overflow on any viewport */
+html, body { overflow-x: hidden; }
 
 @media (max-width: 767px) {
   /* Mobile nav */
@@ -923,6 +928,7 @@ section + section { margin-top: var(--sp-12); }
 
   /* Hero */
   .hero { padding: var(--sp-12) var(--sp-4); }
+  .hero-name { font-size: clamp(1.6rem, 7vw, 2rem); }
 
   /* page wrap */
   .page-wrap { padding: var(--sp-8) var(--sp-4); }
