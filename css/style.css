@@ -401,7 +401,6 @@ section + section { margin-top: var(--sp-12); }
 
 /* About text
    ------------------------------------------------------------- */
-.about-text { max-width: var(--measure); }
 .about-text p + p { margin-top: var(--sp-4); }
 
 /* What I Do cards
