@@ -1,0 +1,68 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-16T13:37:28.448Z",
+        "reason": "Static hook cannot resolve CSS custom properties from external stylesheet; --c-muted fixed to #3d6474 (6.4:1 on white), nav rgba(255,255,255,.78) on #012030 is ~9.9:1 — all pass AA on manual calculation"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "projects.html"
+        ],
+        "createdAt": "2026-10-16T13:39:01.173Z",
+        "reason": "Same CSS variable resolution false positive as index.html; --c-muted resolved to #3d6474 which is 6.4:1 on white — passes AA"
+      },
+      {
+        "rule": "overused-font",
+        "value": "space grotesk",
+        "createdAt": "2026-10-16T13:42:37.801Z",
+        "reason": "Deliberately chosen: CSS comment documents the rationale ('geometric, precise, reads technical + modern without feeling corporate'). Predates session."
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-16T13:42:52.027Z",
+        "reason": "Pre-existing .wid-icon design system pattern, predates session, refinement preserves incumbent"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "projects.html"
+        ],
+        "createdAt": "2026-10-16T13:42:52.036Z",
+        "reason": "Pre-existing design system pattern, predates session"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-16T13:42:52.046Z",
+        "reason": "Pre-existing .contact-icon design system pattern, predates session"
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-16T13:44:43.968Z",
+        "reason": "User confirmed: opacity raised to 0.20 so texture reads through gradient"
+      }
+    ]
+  }
+}
